@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class='container'>
- <h1> Content Management System </h1>
+ <h1> Contact Management System </h1>
  <div id="vueapp">
  	<table class="table table-responsive table-strip">
  		<tr>
@@ -20,7 +20,7 @@
  		<td> Job </td>
 		</tr>
 
-		<tr v-for='contact in contacts'>
+		<tr v-for="contact in contacts" v-bind:key="contact.id">
 			<td>{{ contact.name }}</td>
 			<td>{{ contact.email }}</td>
 			<td>{{ contact.country }}</td>
