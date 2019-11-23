@@ -9,20 +9,23 @@ var app = new Vue({
  	contacts : []
  },
  mounted : function(){
- 	console.log("Hello from Binayak");
+	 console.log("Hello from Binayak");
+	 
  	this.getContacts();
 
  },
  methods : {
  	 getContacts: function(){
- 	 		axios.get('api/contact.php').
- 	 		then(function(response){	
+		  const vm = this;
+			  axios.get('api/contact.php')
+			  .then(function (response) {
  	 			console.log(response.data);
- 	 			this.contacts = response.data;
+				vm.contacts = response.data;
  	 		})
- 	 		.catch(err => console.log(err));
+ 	 		.catch(function(err) {console.log(err)});
  	},
  	createContact : function(){
+		 const vm = this;
  		  let formData = new FormData();
  			console.log("Create Contact");
  			
@@ -46,17 +49,18 @@ var app = new Vue({
  			})
  			.then(function(response){
  					console.log(response);
- 					app.contacts.push(contact);
- 					app.resetForm();
+ 					vm.contacts.push(response.data);
+ 					vm.resetForm();
  			})
  			.catch(function(err){ console.log(err); })
  	},
  	resetForm : function(){
- 				this.name = '',
- 				this.email = '',
- 				this.country = '',
- 				this.city = '',
- 				this.job = ''
+		 const vm = this;
+ 				vm.name = '',
+ 				vm.email = '',
+ 				vm.country = '',
+ 				vm.city = '',
+ 				vm.job = ''
  	}
 
  }
