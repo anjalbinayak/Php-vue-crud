@@ -1,9 +1,10 @@
 <?php
 
 try {
-    $server = readline("Enter Server Name (localhost) ") ? $server : "localhost";
-    $username = readline("Enter Username (default root) ") ? $username : "root";
-    $password = readline("Enter Password (leave blank if empty) ") ? $password : '';
+    if(!$server = readline("Enter Server Name (localhost) ")) $server ="localhost" ;
+    
+    if(!$username = readline("Enter Username (default root) "))  $username = "root";
+    if(!$password = readline("Enter Password (leave blank if empty) "))  $password = '';
     $dbName = readline("Enter Database name " );
     while(!$dbName)
     {
