@@ -33,3 +33,7 @@ If You modify the name of config file created by script then , it may generate s
 # Requirements
 
 This project requires [composer](https://getcomposer.org/download/)  installed 
+
+
+# Contribution 
+Any Contribution to this project is highly appreciated 
