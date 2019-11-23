@@ -32,7 +32,7 @@ If You modify the name of config file created by script then , it may generate s
 
 # Requirements
 
-This project requires [composer](https://getcomposer.org/download/)  installed 
+This project requires any local server installed (W/X/L AMPP)
 
 
 # Contribution 
